@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mypage.master.cs" Inherits="asp_project_demo.Mypage" %>
+
+<%@ Register Src="~/navigation.ascx" TagPrefix="uc1" TagName="navigation" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title><%:Page.Title %></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <style>
+        /*body{
+            padding-top:70px;
+        }*/
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <uc1:navigation runat="server" ID="navigation" />
+     
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+<asp:ContentPlaceHolder ID="foot" runat="server">
+    <script src="Scripts/bootstrap.min.js"></script>
+</asp:ContentPlaceHolder>
+</html>
